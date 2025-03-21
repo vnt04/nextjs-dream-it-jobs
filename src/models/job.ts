@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { InferSchemaType } from "mongoose";
 
 const JobSchema = new mongoose.Schema({
   job_title: {
@@ -69,5 +69,6 @@ const JobSchema = new mongoose.Schema({
   },
 });
 
-const Job = mongoose.models.User || mongoose.model("Job", JobSchema);
-export default Job;
+export type JobType = InferSchemaType<typeof JobSchema>;
+
+export const Job = mongoose.models.Job || mongoose.model("Job", JobSchema);
