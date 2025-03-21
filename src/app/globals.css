@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #33afa9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Button css */
+.btn-1,
+.btn-2 {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.btn-1 {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-1:hover {
+  background-color: rgb(41, 156, 141);
+}
+
+.btn-2 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-2:hover {
+  background-color: rgb(244, 241, 241);
+}
+
+/* css responsive for container - main content  */
+.container {
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0px 2%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0px 10%;
   }
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (min-width: 2496px) {
+  .container {
+    padding: 0 5%;
+    max-width: 1920px;
+  }
 }
