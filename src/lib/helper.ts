@@ -1,4 +1,4 @@
-import { formatDistanceToNow, differenceInDays } from "date-fns";
+import { formatDistanceToNow } from "date-fns";
 import { vi } from "date-fns/locale";
 
 // export const preventScroll = (condition: ) => {
@@ -32,10 +32,10 @@ export const formatCurrency = (number: number) => {
   });
 };
 
-const parseDate = (dateString: string) => {
-  const [day, month, year] = dateString.split("/").map(Number);
-  return new Date(year, month - 1, day);
-};
+// const parseDate = (dateString: string) => {
+//   const [day, month, year] = dateString.split("/").map(Number);
+//   return new Date(year, month - 1, day);
+// };
 
 // export const compareDate = (date1:string, date2:string) => {
 //   return parseDate(date2) - parseDate(date1);
