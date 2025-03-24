@@ -1,5 +1,5 @@
 import { IoSearch } from "react-icons/io5";
-import Tag from "../tag";
+import Tag from "../common/tag";
 
 export default function QuickSearch() {
   return (

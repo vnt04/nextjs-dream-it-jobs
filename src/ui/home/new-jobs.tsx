@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BsFire } from "react-icons/bs";
 import { IoLocation } from "react-icons/io5";
 import { PiMoneyWavy } from "react-icons/pi";
-import Tag from "../tag";
+import Tag from "../common/tag";
 import { CiHeart } from "react-icons/ci";
 import { calculateDaysAgo, formatCurrency } from "@/lib/helper";
 

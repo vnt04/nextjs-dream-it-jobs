@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { CiBookmark } from "react-icons/ci";
 import { FaSun } from "react-icons/fa6";
-import Tag from "../tag";
+import Tag from "../common/tag";
 import { fetchMostFollowCompany } from "@/lib/data";
 
 export default async function BestCompany() {
